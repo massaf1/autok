@@ -14,19 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26eff029-8377-43f2-8e61-d5e640d1f055" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.autok/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Form1.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Form1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Properties/Resources.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Properties/Resources.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Properties/Settings.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Properties/Settings.settings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autok.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autok.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +23,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Form1.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1rGYHndma44jT41YzpDj7UQRiDP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -76,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618603809560</updated>
-      <workItem from="1618603817711" duration="269000" />
+      <workItem from="1618603817711" duration="938000" />
     </task>
     <servers />
   </component>
@@ -108,10 +103,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1618603809166" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1618604099598">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1618604133345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1618604099598" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1618604133345" />
+    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1618604776150">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1618604776150" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1618603999530">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

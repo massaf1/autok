@@ -16,5 +16,10 @@ namespace autok
         {
             InitializeComponent();
         }
+
+        public void Form1_load(object e)
+        {
+            
+        }
     }
 }
