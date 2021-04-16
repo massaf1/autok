@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "autok", "autok.csproj", "{8BA1F097-9D49-4677-9AB6-0A7EF2FE5EFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BA1F097-9D49-4677-9AB6-0A7EF2FE5EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA1F097-9D49-4677-9AB6-0A7EF2FE5EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BA1F097-9D49-4677-9AB6-0A7EF2FE5EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BA1F097-9D49-4677-9AB6-0A7EF2FE5EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
