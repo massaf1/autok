@@ -17,7 +17,15 @@ namespace autok
         public const string infofilepath = @"..\..\..\data\info.txt";
         List<Records> sorok = new List<Records>(0);
         public Form1()
-        {
+        {            StreamReader file= new StreamReader(Form1.autofilepath,Encoding.Default);
+            string[] lines = File.ReadAllLines(Form1.autofilepath);
+            foreach (var sor in lines)
+            {
+                string[] osztott= sor.Split(' ');
+                sorok.Add(new Records(Convert.ToInt32(osztott[0]),Convert.ToInt32(osztott[1]),
+                    Convert.ToInt32(osztott[2]),osztott[3],Convert.ToInt32(osztott[4]),Convert.ToInt32(osztott[5]),
+                    Convert.ToInt32(osztott[6])));
+            }
             InitializeComponent();
         }
         
