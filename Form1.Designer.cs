@@ -36,6 +36,7 @@
             this.kmTextBox = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.adminButton = new System.Windows.Forms.Button();
+            this.rogzitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // idTextBox
@@ -45,7 +46,8 @@
             this.idTextBox.Size = new System.Drawing.Size(346, 22);
             this.idTextBox.TabIndex = 0;
             this.idTextBox.Text = "Id:";
-            this.idTextBox.Click += new System.EventHandler(this.idTextBox_Click);
+            this.idTextBox.Enter += new System.EventHandler(this.idTextBox_Enter);
+            this.idTextBox.Leave += new System.EventHandler(this.idTextBox_Leave);
             // 
             // rendszamTextBox
             // 
@@ -54,6 +56,8 @@
             this.rendszamTextBox.Size = new System.Drawing.Size(346, 22);
             this.rendszamTextBox.TabIndex = 1;
             this.rendszamTextBox.Text = "Rendszam:";
+            this.rendszamTextBox.Enter += new System.EventHandler(this.rendszamTextBox_Enter);
+            this.rendszamTextBox.Leave += new System.EventHandler(this.rendszamTextBox_Leave);
             // 
             // hozRadioButton
             // 
@@ -64,6 +68,7 @@
             this.hozRadioButton.TabStop = true;
             this.hozRadioButton.Text = "Hozom";
             this.hozRadioButton.UseVisualStyleBackColor = true;
+            this.hozRadioButton.Click += new System.EventHandler(this.hozRadioButton_Click);
             // 
             // viszRadioButton
             // 
@@ -74,6 +79,7 @@
             this.viszRadioButton.TabStop = true;
             this.viszRadioButton.Text = "Viszem";
             this.viszRadioButton.UseVisualStyleBackColor = true;
+            this.viszRadioButton.Click += new System.EventHandler(this.viszRadioButton_Click);
             // 
             // kmTextBox
             // 
@@ -81,6 +87,10 @@
             this.kmTextBox.Name = "kmTextBox";
             this.kmTextBox.Size = new System.Drawing.Size(346, 22);
             this.kmTextBox.TabIndex = 4;
+            this.kmTextBox.Text = "Mennyi a kilometerora?";
+            this.kmTextBox.Visible = false;
+            this.kmTextBox.Enter += new System.EventHandler(this.kmTextBox_Enter);
+            this.kmTextBox.Leave += new System.EventHandler(this.kmTextBox_Leave);
             // 
             // textBox4
             // 
@@ -100,12 +110,23 @@
             this.adminButton.Text = "Adminisztacio";
             this.adminButton.UseVisualStyleBackColor = true;
             // 
+            // rogzitButton
+            // 
+            this.rogzitButton.Location = new System.Drawing.Point(236, 374);
+            this.rogzitButton.Name = "rogzitButton";
+            this.rogzitButton.Size = new System.Drawing.Size(164, 64);
+            this.rogzitButton.TabIndex = 7;
+            this.rogzitButton.Text = "Rogzites";
+            this.rogzitButton.UseVisualStyleBackColor = true;
+            this.rogzitButton.Click += new System.EventHandler(this.rogzitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rogzitButton);
             this.Controls.Add(this.adminButton);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.kmTextBox);
@@ -118,6 +139,8 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button rogzitButton;
 
         private System.Windows.Forms.Button adminButton;
 

@@ -21,6 +21,7 @@
         <e p="Settings.Designer.cs" t="Include" />
         <e p="Settings.settings" t="Include" />
       </e>
+      <e p="records.cs" t="Include" />
     </e>
   </component>
 </project>
