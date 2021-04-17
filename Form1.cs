@@ -17,9 +17,9 @@ namespace autok
             InitializeComponent();
         }
 
-        public void Form1_load(object e)
+        private void idTextBox_Click(object sender, EventArgs e)
         {
-            
+            idTextBox.Text = "";
         }
     }
 }
