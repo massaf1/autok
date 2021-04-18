@@ -14,13 +14,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26eff029-8377-43f2-8e61-d5e640d1f055" name="Default Changelist" comment="Alap Design">
-      <change afterPath="$PROJECT_DIR$/records.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.autok/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.autok/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.autok/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.autok/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/autok.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/autok.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/records.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Records.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +28,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Tamas/RiderProjects/autok/Form1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Tamas/RiderProjects/autok/Form1.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/data/info.txt" />
         <option value="$PROJECT_DIR$/records.cs" />
+        <option value="$PROJECT_DIR$/Records.cs" />
         <option value="$PROJECT_DIR$/Form1.cs" />
       </list>
     </option>
@@ -128,22 +131,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="517" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1618603964537" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1618695305575">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1618777892598">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1618695305575" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1618695305575">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1618777892598" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1618777892598">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1618695305575" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1618695305575">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1618777892598" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1618777892597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1618695305575" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1618695305575">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1618777892597" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1618777892598">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1618695305575" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1618777892598" />
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1618603809166">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

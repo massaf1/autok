@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,19 +14,27 @@ namespace autok
 {
     public partial class Form1 : Form
     {
-        public const string autofilepath = @"..\..\..\data\autok.txt";
-        public const string infofilepath = @"..\..\..\data\info.txt";
+        /*public const string autofilepath = @"..\..\data\autok.txt";
+        public const string infofilepath = @"..\..\data\info.txt";
+        */
+        public const string autofilepath = @"C:\Users\Tamas\RiderProjects\autok\data\autok.txt";
+        public const string infofilepath = @"C:\Users\Tamas\RiderProjects\autok\data\info.txt";
         List<Records> sorok = new List<Records>(0);
         public Form1()
-        {            StreamReader file= new StreamReader(Form1.autofilepath,Encoding.Default);
-            string[] lines = File.ReadAllLines(Form1.autofilepath);
-            foreach (var sor in lines)
+        { 
+            StreamReader file = new StreamReader(Form1.autofilepath, Encoding.Default);
+            string sor;
+            while (!file.EndOfStream)
             {
-                string[] osztott= sor.Split(' ');
-                sorok.Add(new Records(Convert.ToInt32(osztott[0]),Convert.ToInt32(osztott[1]),
-                    Convert.ToInt32(osztott[2]),osztott[3],Convert.ToInt32(osztott[4]),Convert.ToInt32(osztott[5]),
-                    Convert.ToInt32(osztott[6])));
+                sor = file.ReadLine();
+                //adminButton.Text = sor;
+                string[] osztott = sor.Split(' ');
+                string[] oszt = osztott[1].Split(':');
+                sorok.Add(new Records(Convert.ToInt32(osztott[0]),Convert.ToInt32(oszt[0]),
+                    Convert.ToInt32(oszt[1]),osztott[2],Convert.ToInt32(osztott[3]),Convert.ToInt32(osztott[4]),
+                    Convert.ToInt32(osztott[5])));
             }
+            file.Close();
             InitializeComponent();
         }
         
@@ -45,7 +54,7 @@ namespace autok
 
         private void rendszamTextBox_Leave(object sender, EventArgs e)
         {
-            rendszamTextBox.Text = "Rendszam";
+            rendszamTextBox.Text = "Rendszam:";
         }
 
         private void kmTextBox_Enter(object sender, EventArgs e)

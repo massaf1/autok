@@ -37,6 +37,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.adminButton = new System.Windows.Forms.Button();
             this.rogzitButton = new System.Windows.Forms.Button();
+            this.testRichTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // idTextBox
@@ -120,12 +121,21 @@
             this.rogzitButton.UseVisualStyleBackColor = true;
             this.rogzitButton.Click += new System.EventHandler(this.rogzitButton_Click);
             // 
+            // testRichTextBox
+            // 
+            this.testRichTextBox.Location = new System.Drawing.Point(569, 47);
+            this.testRichTextBox.Name = "testRichTextBox";
+            this.testRichTextBox.Size = new System.Drawing.Size(188, 245);
+            this.testRichTextBox.TabIndex = 8;
+            this.testRichTextBox.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.testRichTextBox);
             this.Controls.Add(this.rogzitButton);
             this.Controls.Add(this.adminButton);
             this.Controls.Add(this.textBox4);
@@ -139,6 +149,8 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.RichTextBox testRichTextBox;
 
         private System.Windows.Forms.Button rogzitButton;
 
