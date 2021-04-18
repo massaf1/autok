@@ -14,11 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26eff029-8377-43f2-8e61-d5e640d1f055" name="Default Changelist" comment="Alap Design">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.autok/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.autok/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autok.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/autok.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/records.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Records.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

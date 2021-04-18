@@ -88,6 +88,31 @@ namespace autok
         private void rogzitButton_Click(object sender, EventArgs e)
         {
             
+            StreamReader file= new StreamReader(Form1.autofilepath,Encoding.Default);
+            int hossz=0;
+            while (!file.EndOfStream)
+            {
+                file.ReadLine();
+                hossz++;
+            }
+            file.Close();
+            if (hossz >= 500)
+            {
+                testRichTextBox.Text = "Sajnalom ebben a honapban nem szabad tobb autot elvinni";
+            }
+            else
+            {
+                DateTime today = DateTime.Today;
+                string h=DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+                string[] he = h.Split(' ');
+                string[] heh = he[1].Split(':');
+                StreamReader file1= new StreamReader(infofilepath,Encoding.Default);
+                
+                if (sorok[hossz - 1].nap >= Convert.ToInt32(today))
+                {
+                    
+                }
+            }
         }
         public static void lineChanger(string newText, string fileName, int line_to_edit)
         {
