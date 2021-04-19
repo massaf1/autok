@@ -107,11 +107,52 @@ namespace autok
                 string[] he = h.Split(' ');
                 string[] heh = he[1].Split(':');
                 StreamReader file1= new StreamReader(infofilepath,Encoding.Default);
-                
-                if (sorok[hossz - 1].nap >= Convert.ToInt32(today))
+                string s;
+                int t = 2;
+                while (!file1.EndOfStream)
                 {
-                    
+                    s = file1.ReadLine();
+                    string[] bont = s.Split(' ');
+                    if (bont[0] == rendszamTextBox.Text)
+                    {
+                        if (hozRadioButton.Checked)
+                        {
+                            t = 0;
+                        } else if (viszRadioButton.Checked)
+                        {
+                            t = 1;
+                        }
+
+                        if (Convert.ToInt32(bont[2]) == t)
+                        {
+                            if (sorok[hossz - 1].nap >= Convert.ToInt32(today))
+                            {
+                                if (sorok[hossz - 1].ora >= Convert.ToInt32(heh[0]))
+                                {
+                                    if (sorok[hossz - 1].perc >= Convert.ToInt32(heh[1]))
+                                    {
+                                        file1.Close();
+                                        switch (t)
+                                        {
+                                            case 1:
+                                                t = 0;
+                                                break;
+                                            case 0:
+                                                t = 1;
+                                                break;
+                                        }
+                                            sorok.Add(new Records(Convert.ToInt32(today),Convert.ToInt32(heh[0]),Convert.ToInt32(heh[1])
+                                            ,rendszamTextBox.Text,Convert.ToInt32(idTextBox.Text),Convert.ToInt32(bont[1]),t));
+                                        //StreamWriter fileauto= new StreamWriter(Form1.autofilepath,true,Encoding.Default);
+                                        string asd = sorok[hossz].Kiir();
+                                        lineChanger(asd,autofilepath,hossz);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
+                file1.Close();
             }
         }
         public static void lineChanger(string newText, string fileName, int line_to_edit)

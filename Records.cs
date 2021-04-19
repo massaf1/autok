@@ -21,8 +21,10 @@
             kibe = kb;
         }
 
-        public void Kiir()
+        public string Kiir()
         {
+            string s =nap+""+ora+":"+perc+" "+rendszam+" "+munkas+" "+kilometerora+" "+kibe;
+            return s;
         }
     }
 }
