@@ -44,7 +44,8 @@ namespace autok
         }
         private void idTextBox_Leave(object sender, EventArgs e)
         {
-            idTextBox.Text = "Id:";
+            if(idTextBox.Text=="")
+                idTextBox.Text = "Id:";
         }
 
         private void rendszamTextBox_Enter(object sender, EventArgs e)
@@ -54,6 +55,7 @@ namespace autok
 
         private void rendszamTextBox_Leave(object sender, EventArgs e)
         {
+            if(rendszamTextBox.Text=="")
             rendszamTextBox.Text = "Rendszam:";
         }
 
@@ -64,6 +66,7 @@ namespace autok
 
         private void kmTextBox_Leave(object sender, EventArgs e)
         {
+            if(kmTextBox.Text=="")
             kmTextBox.Text = "Mennyi a kilometerora?";
         }
 
@@ -143,9 +146,9 @@ namespace autok
                                         }
                                             sorok.Add(new Records(Convert.ToInt32(today),Convert.ToInt32(heh[0]),Convert.ToInt32(heh[1])
                                             ,rendszamTextBox.Text,Convert.ToInt32(idTextBox.Text),Convert.ToInt32(bont[1]),t));
-                                        //StreamWriter fileauto= new StreamWriter(Form1.autofilepath,true,Encoding.Default);
+                                        StreamWriter fileauto= new StreamWriter(Form1.autofilepath,true,Encoding.Default);
                                         string asd = sorok[hossz].Kiir();
-                                        lineChanger(asd,autofilepath,hossz);
+                                        fileauto.WriteLine(asd);
                                     }
                                 }
                             }
