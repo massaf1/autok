@@ -23,7 +23,29 @@
 
         public string Kiir()
         {
-            string s =nap+""+ora+":"+perc+" "+rendszam+" "+munkas+" "+kilometerora+" "+kibe;
+            string s;
+            if (ora < 10)
+            {
+                if (perc < 10)
+                {
+                    s =nap+" 0"+ora+":0"+perc+" "+rendszam+" "+munkas+" "+kilometerora+" "+kibe;
+                }
+                else
+                {
+                    s =nap+" 0"+ora+":"+perc+" "+rendszam+" "+munkas+" "+kilometerora+" "+kibe;
+                }
+            }
+            else
+            {
+                if (perc < 10)
+                {
+                    s =nap+" "+ora+":0"+perc+" "+rendszam+" "+munkas+" "+kilometerora+" "+kibe;
+                }
+                else
+                {
+                    s =nap+" "+ora+":"+perc+" "+rendszam+" "+munkas+" "+kilometerora+" "+kibe;
+                }
+            }
             return s;
         }
     }

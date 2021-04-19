@@ -19,7 +19,7 @@ namespace autok
         */
         public const string autofilepath = @"C:\Users\Tamas\RiderProjects\autok\data\autok.txt";
         public const string infofilepath = @"C:\Users\Tamas\RiderProjects\autok\data\info.txt";
-        List<Records> sorok = new List<Records>(0);
+        public static List<Records> sorok = new List<Records>(0);
         public Form1()
         { 
             StreamReader file = new StreamReader(Form1.autofilepath, Encoding.Default);
@@ -128,7 +128,8 @@ namespace autok
 
                         if (Convert.ToInt32(bont[2]) == t)
                         {
-                            if (sorok[hossz - 1].nap >= Convert.ToInt32(today))
+                            int d = Convert.ToInt32(today);
+                            if (sorok[hossz - 1].nap >= Convert.ToInt32(d))
                             {
                                 if (sorok[hossz - 1].ora >= Convert.ToInt32(heh[0]))
                                 {
@@ -163,6 +164,13 @@ namespace autok
             string[] arrLine = File.ReadAllLines(fileName);
             arrLine[line_to_edit - 1] = newText;
             File.WriteAllLines(fileName, arrLine);
+        }
+
+        private void adminButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            adminForm f2= new adminForm();
+            f2.ShowDialog();
         }
     }
 }

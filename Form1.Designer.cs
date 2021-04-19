@@ -34,10 +34,10 @@
             this.hozRadioButton = new System.Windows.Forms.RadioButton();
             this.viszRadioButton = new System.Windows.Forms.RadioButton();
             this.kmTextBox = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.adminButton = new System.Windows.Forms.Button();
             this.rogzitButton = new System.Windows.Forms.Button();
             this.testRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.adminButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // idTextBox
@@ -93,24 +93,6 @@
             this.kmTextBox.Enter += new System.EventHandler(this.kmTextBox_Enter);
             this.kmTextBox.Leave += new System.EventHandler(this.kmTextBox_Leave);
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(154, 166);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(215, 22);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.Text = "Mit csinalsz az autoval?";
-            // 
-            // adminButton
-            // 
-            this.adminButton.Location = new System.Drawing.Point(624, 374);
-            this.adminButton.Name = "adminButton";
-            this.adminButton.Size = new System.Drawing.Size(164, 64);
-            this.adminButton.TabIndex = 6;
-            this.adminButton.Text = "Adminisztacio";
-            this.adminButton.UseVisualStyleBackColor = true;
-            // 
             // rogzitButton
             // 
             this.rogzitButton.Location = new System.Drawing.Point(236, 374);
@@ -129,16 +111,34 @@
             this.testRichTextBox.TabIndex = 8;
             this.testRichTextBox.Text = "";
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(154, 174);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Mit csinalsz az autoval?";
+            // 
+            // adminButton
+            // 
+            this.adminButton.Location = new System.Drawing.Point(593, 374);
+            this.adminButton.Name = "adminButton";
+            this.adminButton.Size = new System.Drawing.Size(164, 64);
+            this.adminButton.TabIndex = 10;
+            this.adminButton.Text = "Adminisztracio";
+            this.adminButton.UseVisualStyleBackColor = true;
+            this.adminButton.Click += new System.EventHandler(this.adminButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.adminButton);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.testRichTextBox);
             this.Controls.Add(this.rogzitButton);
-            this.Controls.Add(this.adminButton);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.kmTextBox);
             this.Controls.Add(this.viszRadioButton);
             this.Controls.Add(this.hozRadioButton);
@@ -149,6 +149,8 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.RichTextBox testRichTextBox;
 
@@ -161,8 +163,6 @@
         private System.Windows.Forms.TextBox kmTextBox;
         private System.Windows.Forms.TextBox rendszamTextBox;
         private System.Windows.Forms.RadioButton viszRadioButton;
-
-        private System.Windows.Forms.TextBox textBox4;
 
         #endregion
     }
