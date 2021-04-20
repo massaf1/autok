@@ -28,7 +28,7 @@
             {
                 if (perc < 10)
                 {
-                    s =nap+" 0"+ora+":0"+perc+" "+rendszam+" "+munkas+" "+kilometerora+" "+kibe;
+                    s =nap+" 0"+ora+":0"+perc+" "+rendszam+" "+munkas+" "+kilometerora+"km "+kibe;
                 }
                 else
                 {
