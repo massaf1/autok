@@ -27,14 +27,26 @@ namespace autok
 
         private void harmadikButton_Click(object sender, EventArgs e)
         {
-            string s;
+            string s,a;
+            int temp = 0;
             foreach (var sor in Form1.sorok)
             {
                 if (sor.nap == Convert.ToInt32(inputTextbox.Text))
                 {
                     s = sor.Kiir();
-                    s += "\n";
-                    outputRichTextBox.Text+=s;
+                    temp = s.Length;
+                    a = s.Substring(0, temp - 1);
+                    if (sor.kibe == 0)
+                    {
+                        a += "ki";
+                    }
+                    else
+                    {
+                        a += "be";
+                    }
+
+                    a += "\n";
+                    outputRichTextBox.Text+=a;
                 }
             }
         }
