@@ -19,6 +19,8 @@ namespace autok
         */
         public const string autofilepath = @"C:\Users\Tamas\RiderProjects\autok\data\autok.txt";
         public const string infofilepath = @"C:\Users\Tamas\RiderProjects\autok\data\info.txt";
+        public const string newfilepath = @"C:\Users\Tamas\RiderProjects\autok\data\ujhonap.txt";
+        
         public static List<Records> sorok = new List<Records>(0);
         public Form1()
         { 
@@ -90,74 +92,36 @@ namespace autok
 
         private void rogzitButton_Click(object sender, EventArgs e)
         {
-            
-            StreamReader file= new StreamReader(Form1.autofilepath,Encoding.Default);
-            int hossz=0;
-            while (!file.EndOfStream)
+            var date = DateTime.Now;
+            DateTime today = DateTime.Today;
+            string nap = Convert.ToString(today);
+            string d="";
+            int f=2;
+            if (hozRadioButton.Checked)
             {
-                file.ReadLine();
-                hossz++;
-            }
-            file.Close();
-            if (hossz >= 500)
+                f = 1;
+                d = kmTextBox.Text;
+            } else if (viszRadioButton.Checked)
             {
-                testRichTextBox.Text = "Sajnalom ebben a honapban nem szabad tobb autot elvinni";
-            }
-            else
-            {
-                DateTime today = DateTime.Today;
-                string h=DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
-                string[] he = h.Split(' ');
-                string[] heh = he[1].Split(':');
-                StreamReader file1= new StreamReader(infofilepath,Encoding.Default);
-                string s;
-                int t = 2;
-                while (!file1.EndOfStream)
+                f = 0;
+                StreamReader hehe= new StreamReader(Form1.infofilepath,Encoding.Default);
+                while (!hehe.EndOfStream)
                 {
-                    s = file1.ReadLine();
-                    string[] bont = s.Split(' ');
-                    if (bont[0] == rendszamTextBox.Text)
+                    string r = hehe.ReadLine();
+                    string[] n = r.Split(' ');
+                    if (rendszamTextBox.Text == n[0])
                     {
-                        if (hozRadioButton.Checked)
-                        {
-                            t = 0;
-                        } else if (viszRadioButton.Checked)
-                        {
-                            t = 1;
-                        }
-
-                        if (Convert.ToInt32(bont[2]) == t)
-                        {
-                            int d = Convert.ToInt32(today);
-                            if (sorok[hossz - 1].nap >= Convert.ToInt32(d))
-                            {
-                                if (sorok[hossz - 1].ora >= Convert.ToInt32(heh[0]))
-                                {
-                                    if (sorok[hossz - 1].perc >= Convert.ToInt32(heh[1]))
-                                    {
-                                        file1.Close();
-                                        switch (t)
-                                        {
-                                            case 1:
-                                                t = 0;
-                                                break;
-                                            case 0:
-                                                t = 1;
-                                                break;
-                                        }
-                                            sorok.Add(new Records(Convert.ToInt32(today),Convert.ToInt32(heh[0]),Convert.ToInt32(heh[1])
-                                            ,rendszamTextBox.Text,Convert.ToInt32(idTextBox.Text),Convert.ToInt32(bont[1]),t));
-                                        StreamWriter fileauto= new StreamWriter(Form1.autofilepath,true,Encoding.Default);
-                                        string asd = sorok[hossz].Kiir();
-                                        fileauto.WriteLine(asd);
-                                    }
-                                }
-                            }
-                        }
+                        d = n[1];
                     }
                 }
-                file1.Close();
+                hehe.Close();
             }
+            string jegyzet =date.Day +" "+ date.Hour + ":" + date.Minute + " " +rendszamTextBox.Text+" "+idTextBox.Text+" "
+                             +d+" "+f;
+            StreamWriter file6= new StreamWriter(Form1.newfilepath,true,Encoding.Default);
+            file6.WriteLine(jegyzet);
+            file6.Close();
+            testRichTextBox.Text = "Rogzitettuk ezeket az adatokat:\n"+jegyzet;
         }
         public static void lineChanger(string newText, string fileName, int line_to_edit)
         {

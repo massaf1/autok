@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Windows.Forms;
@@ -114,6 +115,7 @@ namespace autok
 
         private void hatodikButton_Click(object sender, EventArgs e)
         {
+                /*
             outputRichTextBox.Text = "";
             int auto = 0;
             int d = 0;
@@ -174,6 +176,24 @@ namespace autok
                     }
                 }
             }
+            */
+                
+                outputRichTextBox.Text = "";
+                List<Records> rszrendezett = rekordok.OrderBy(o => o.rendszam).ToList();
+                int kmmax = 0;
+                int szemely = 0;
+                for (int i = 1; i < rszrendezett.Count; i++)
+                {
+                    if (rszrendezett[i].rendszam == rszrendezett[i-1].rendszam && rszrendezett[i].kibe == 1)
+                    {
+                        if (kmmax < rszrendezett[i].kilometerora - rszrendezett[i - 1].kilometerora)
+                        {
+                            kmmax = rszrendezett[i].kilometerora - rszrendezett[i - 1].kilometerora;
+                            szemely = rszrendezett[i].munkas; 
+                        }
+                    }
+                }
+                outputRichTextBox.Text = "Leghosszabb út: " + kmmax.ToString() + " km, személy: " + szemely.ToString();
         }
 
         private void hetedikButton_Click(object sender, EventArgs e)
@@ -187,7 +207,7 @@ namespace autok
             {
                 if (sor.rendszam == cim)
                 {
-                    file.WriteLine(sor.Kiir()+"\n");
+                    file.WriteLine(sor.Kiir());
                     outputRichTextBox.Text += sor.Kiir()+"\n";
                 }
             }
